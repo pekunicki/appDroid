@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="20dp"
+    tools:context="com.pwr.kunicki.bmi.Author">
+
+    <TextView
+        android:id="@+id/LoremIpsum"
+        style="@style/AppDataText"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:text="@string/LoremIpsum"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textAlignment="center"/>
+    />
+
+</android.support.constraint.ConstraintLayout>

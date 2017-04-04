@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="20dp"
+    tools:context="com.pwr.kunicki.bmi_calculator.MainActivity">
+
+    <Button
+        android:id="@+id/shareBMI"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bmiResult"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="30dp"
+        android:background="@android:color/holo_blue_light"
+        android:textColor="@android:color/white"
+        android:text="@string/shareBMI" />
+
+
+    <Button
+        android:id="@+id/aboutAuthor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_toRightOf="@+id/shareBMI"
+        android:layout_alignBaseline="@id/shareBMI"
+        android:layout_marginLeft="20dp"
+        android:background="@android:color/holo_blue_dark"
+        android:textColor="@android:color/white"
+        android:text="@string/author" />
+
+
+    <Button
+        android:id="@+id/calculateButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_below="@+id/weightEditText"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="30dp"
+        android:text="@string/calculateButtonText" />
+
+    <EditText
+        android:id="@+id/weightEditText"
+        style="@style/AppInputData"
+        android:layout_toRightOf="@+id/weightText"
+        android:layout_alignBottom="@+id/weightText"
+        android:hint="@string/weight_hint"
+        android:maxLength="5" />
+
+    <EditText
+        android:id="@+id/heightEditText"
+        style="@style/AppInputData"
+        android:maxLength="3"
+        android:hint="@string/height_hint"
+        android:layout_toRightOf="@+id/heightText"
+        android:layout_alignBottom="@+id/heightText"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:id="@+id/heightText"
+        style="@style/AppDataText"
+        android:labelFor="@+id/heightEditText"
+        android:layout_marginLeft="50dp"
+        android:text="@string/app_height" />
+
+
+    <TextView
+        android:id="@+id/weightText"
+        style="@style/AppDataText"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="50dp"
+        android:layout_below="@+id/heightText"
+        android:labelFor="@+id/weightEditText"
+        android:text="@string/app_weight" />
+
+
+    <TextView
+        android:id="@+id/weightSystem"
+        style="@style/AppMetricSystemText"
+android:layout_toRightOf="@+id/weightEditText"
+        android:layout_alignBaseline="@id/weightEditText"
+        android:text="@string/app_weight_measurment_system_eu" />
+
+    <TextView
+        android:id="@+id/heightSystem"
+        style="@style/AppMetricSystemText"
+        android:layout_toRightOf="@+id/heightEditText"
+        android:layout_alignBaseline="@+id/heightEditText"
+        android:text="@string/app_height_measurment_system_eu" />
+
+    <RadioGroup
+        android:id="@+id/measurementSystemRadioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:checkedButton="@+id/measurementSystemEU"
+        android:layout_toRightOf="@+id/heightSystem"
+        android:layout_marginLeft="10dp">
+
+        <RadioButton
+            android:id="@+id/measurementSystemEU"
+            style="@style/AppRadioButtonInMetricSystem"
+            android:text="@string/eu" />
+
+        <RadioButton
+            android:id="@+id/measurementSystemUS"
+            style="@style/AppRadioButtonInMetricSystem"
+            android:text="@string/us" />
+    </RadioGroup>
+
+
+    <TextView
+        android:id="@+id/bmiResult"
+        style="@style/AppBmiResultText"
+        android:layout_below="@+id/calculateButton"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true" />
+
+
+</RelativeLayout>
+</ScrollView>
